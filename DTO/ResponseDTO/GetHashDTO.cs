@@ -8,6 +8,8 @@
         public string Hash { get; set; } = null!;
         public string Sellador { get; set; } = null!;
         public DateTime FechaAlta { get; set; }
+        public string TipoDocumento { get; set; } = null!;
+        public string? Detalles { get; set; }
         public string? Base64 { get; set; }
     }
 }

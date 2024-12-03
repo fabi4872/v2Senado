@@ -363,6 +363,14 @@
             "type": "string",
             "format": "date-time"
           },
+          "tipoDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "detalles": {
+            "type": "string",
+            "nullable": true
+          },
           "base64": {
             "type": "string",
             "nullable": true

@@ -20,5 +20,11 @@ namespace BFASenado.DTO.StampDTO
 
         [Parameter("string[]", "nombreTablas", 5)]
         public List<string>? NombreTablas { get; set; }
+
+        [Parameter("string[]", "detalles", 6)]
+        public List<string>? Detalles { get; set; }
+
+        [Parameter("string[]", "tipoDocumentos", 7)]
+        public List<string>? TipoDocumentos { get; set; }
     }
 }

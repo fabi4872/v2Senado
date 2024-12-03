@@ -39,7 +39,6 @@ namespace BFASenado.Controllers
         // Propiedades de appsettings
         private static string? UrlNodoPrueba;
         private static int ChainID;
-        private static string? Tabla;
         private static string? Sellador;
         private static string? PrivateKey;
         private static string? ContractAddress;
@@ -432,10 +431,6 @@ namespace BFASenado.Controllers
                 BigInteger hashValue = input.HashSHA256.HexToBigInteger(false);
                 string hashHex = input.HashSHA256;
 
-                if (input.HashSHA256.StartsWith("0x"))
-                    input.HashSHA256 = input.HashSHA256.Substring(2);
-                input.HashSHA256 = input.HashSHA256.ToLower();
-
                 if (!hashHex.StartsWith("0x"))
                     hashHex = "0x" + hashHex;
                 hashHex = hashHex.ToLower();
@@ -483,7 +478,9 @@ namespace BFASenado.Controllers
                             null,
                             objectList,
                             input.IdTabla,
-                            input.NombreTabla
+                            input.NombreTabla,
+                            input.Detalles, // Nueva propiedad
+                            input.TipoDocumento // Nueva propiedad
                         );
 
                         if (string.IsNullOrEmpty(transactionHash))
@@ -504,9 +501,9 @@ namespace BFASenado.Controllers
                         // Actualizar registro en base de datos
                         var resultRecuperado = await this.GetHashDTO(input.HashSHA256);
                         TransaccionBFA? recuperado = await _transaccionBFAService.GetByHash(input.HashSHA256);
-                        if (result != null && recuperado != null)
+                        if (resultRecuperado != null && recuperado != null)
                         {
-                            recuperado.FechaAltaBFA = result.FechaAlta;
+                            recuperado.FechaAltaBFA = resultRecuperado.FechaAlta;
                             recuperado.SnAltaBFA = true;
                             await _transaccionBFAService.Update(recuperado);
                         }
@@ -583,6 +580,8 @@ namespace BFASenado.Controllers
                 Hash = hashRecuperado,
                 IdTabla = result.IdTablas != null && result.IdTablas.Any() ? result.IdTablas[0].ToString() : Constantes.Constants.DataMessages.NoRegistra,
                 NombreTabla = result.NombreTablas?.FirstOrDefault() ?? Constantes.Constants.DataMessages.NoRegistra,
+                TipoDocumento = result.TipoDocumentos?.FirstOrDefault() ?? Constantes.Constants.DataMessages.NoRegistra,
+                Detalles = result.Detalles?.FirstOrDefault() ?? Constantes.Constants.DataMessages.NoRegistra,
                 Sellador = signerAddress,
                 Base64 = null
             };
