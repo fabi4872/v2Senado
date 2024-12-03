@@ -8,20 +8,17 @@ namespace BFASenado.Middleware
         private readonly RequestDelegate _next;
         private readonly ILogger<NodeValidationMiddleware> _logger;
         private readonly ILogService _logService;
-        private readonly IMessageService _messageService;
         private readonly string _urlNodoPrueba;
 
         public NodeValidationMiddleware(
             RequestDelegate next,
             ILogger<NodeValidationMiddleware> logger,
             ILogService logService,
-            IMessageService messageService,
             IConfiguration configuration)
         {
             _next = next;
             _logger = logger;
             _logService = logService;
-            _messageService = messageService;
             _urlNodoPrueba = configuration["UrlNodoBFA"];
         }
 

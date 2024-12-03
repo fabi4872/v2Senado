@@ -1,6 +1,7 @@
 ﻿using BFASenado.Middleware;
 using BFASenado.Models;
 using BFASenado.Services;
+using BFASenado.Services.BFA;
 using BFASenado.Services.Repository;
 using ElmahCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +39,7 @@ namespace BFASenado
             services.AddAutoMapper(typeof(Startup));
             services.AddTransient<ITransaccionBFAService, TransaccionBFAService>();
             services.AddTransient<ILogService, LogService>();
+            services.AddTransient<IBFAService, BFAService>();
 
             // Registrar IHttpContextAccessor
             services.AddHttpContextAccessor();
