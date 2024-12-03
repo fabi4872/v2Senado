@@ -32,6 +32,9 @@
             public const string HashGuardarError = "Error al guardar el hash";
             public const string DBGuardarError = "Error al guardar en base de datos";
             public const string DBActualizarError = "Error al actualizar en base de datos";
+            public const string NodoDisponibleError = "El nodo público de la BFA no está disponible";
+            public const string NodoSincronizadoError = "El nodo público de la BFA no está sincronizado";
+            public const string ServicioDisponibleError = "Servicio no disponible o no sincronizado";
 
             // Success
             public const string GetBalanceSuccess = "Balance/gas de la cuenta obtenido correctamente";
