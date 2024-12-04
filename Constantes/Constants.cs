@@ -26,7 +26,7 @@
             public const string GetPropiedadesArchivoError = "Error al obtener las propiedades de archivo";
             public const string GetHashNoExisteError = "El hash no existe";
             public const string GetHashError = "Error al obtener el hash";
-            public const string GetHashesSinFiltroError = "Error al obtener los hashes (sin filtro)";
+            public const string GetHashesError = "Error al obtener los hashes";
             public const string HashDuplicadoError = "Intento de guardar un hash duplicado";
             public const string TransaccionGuardarError = "Error durante la transacción";
             public const string HashGuardarError = "Error al guardar el hash";
@@ -41,6 +41,7 @@
             public const string GetHashSHA256Success = "Hash SHA256 obtenido correctamente";
             public const string GetPropiedadesArchivoSuccess = "Propiedades de archivo obtenidas correctamente";
             public const string GetHashSuccess = "Hash obtenido correctamente";
+            public const string GetHashesConFiltroSuccess = "Hashes obtenidos correctamente (con filtro)";
             public const string GetHashesSinFiltroSuccess = "Hashes obtenidos correctamente (sin filtro)";
             public const string TransaccionGuardarSuccess = "Transacción guardada en la BFA correctamente";
         }

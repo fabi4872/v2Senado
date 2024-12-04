@@ -9,6 +9,7 @@ using BFASenado.Services;
 using BFASenado.Services.Repository;
 using BFASenado.DTO.ResponseDTO;
 using BFASenado.Services.BFA;
+using BFASenado.DTO.LogDTO;
 
 namespace BFASenado.Controllers
 {
@@ -49,8 +50,8 @@ namespace BFASenado.Controllers
         public BFAController(
             IBFAService bfaService,
             ILogService logService,
-            ILogger<BFAController> logger, 
-            BFAContext context, 
+            ILogger<BFAController> logger,
+            BFAContext context,
             IConfiguration configuration,
             ITransaccionBFAService transaccionBFAService)
         {
@@ -83,9 +84,9 @@ namespace BFASenado.Controllers
                 var balanceEther = Web3.Convert.FromWei(balanceWei);
 
                 var logSuccess = _logService.CrearLog(
-                    HttpContext, 
-                    Sellador, 
-                    Constantes.Constants.LogMessages.GetBalanceSuccess, 
+                    HttpContext,
+                    Sellador,
+                    Constantes.Constants.LogMessages.GetBalanceSuccess,
                     null);
                 _logger.LogInformation("{@Log}", logSuccess);
 
@@ -95,12 +96,12 @@ namespace BFASenado.Controllers
             catch (Exception ex)
             {
                 var logError = _logService.CrearLog(
-                    HttpContext, 
-                    Sellador, 
-                    Constantes.Constants.LogMessages.GetBalanceError, 
+                    HttpContext,
+                    Sellador,
+                    Constantes.Constants.LogMessages.GetBalanceError,
                     ex.Message);
                 _logger.LogError("{@Log}", logError);
-                
+
                 throw new Exception($"{Constantes.Constants.LogMessages.GetBalanceError}. {ex.Message}");
             }
         }
@@ -188,26 +189,18 @@ namespace BFASenado.Controllers
             }
         }
 
-        [HttpGet("GetHashBaseDatos")]
-        public async Task<ActionResult<TransaccionBFA?>> GetHashBaseDatos([FromQuery] string hash)
+        [HttpPost("HashBaseDatos")]
+        public async Task<ActionResult<TransaccionBFA?>> HashBaseDatos([FromBody] GetHashSHA256DTO input)
         {
-            if (string.IsNullOrWhiteSpace(hash) || string.IsNullOrEmpty(hash))
-            {
-                return BadRequest(Constantes.Constants.DataAnnotationsErrorMessages.FormatoIncorrecto);
-            }
-
             try
             {
-                if (hash.StartsWith("0x"))
-                    hash = hash.Substring(2);
-                hash = hash.ToLower();
-                TransaccionBFA? transaccion = await _transaccionBFAService.GetByHash(hash);
+                TransaccionBFA? transaccion = await _transaccionBFAService.GetByHash(input.HashSHA256);
 
                 if (transaccion != null)
                 {
                     var logSuccess = _logService.CrearLog(
                         HttpContext,
-                        hash,
+                        input.HashSHA256,
                         Constantes.Constants.LogMessages.GetHashSuccess,
                         null);
                     _logger.LogInformation("{@Log}", logSuccess);
@@ -217,7 +210,7 @@ namespace BFASenado.Controllers
 
                 var logWarning = _logService.CrearLog(
                         HttpContext,
-                        hash,
+                        input.HashSHA256,
                         Constantes.Constants.LogMessages.GetHashNoExisteError,
                         null
                     );
@@ -229,7 +222,7 @@ namespace BFASenado.Controllers
             {
                 var logError = _logService.CrearLog(
                     HttpContext,
-                    hash,
+                    input.HashSHA256,
                     Constantes.Constants.LogMessages.GetHashError,
                     ex.Message);
                 _logger.LogError("{@Log}", logError);
@@ -238,23 +231,18 @@ namespace BFASenado.Controllers
             }
         }
 
-        [HttpGet("GetHashBFA")]
-        public async Task<ActionResult<GetHashDTO>> GetHashBFA([FromQuery] string hash)
+        [HttpPost("HashBFA")]
+        public async Task<ActionResult<GetHashDTO>> HashBFA([FromBody] GetHashSHA256DTO input)
         {
-            if (string.IsNullOrWhiteSpace(hash) || string.IsNullOrEmpty(hash))
-            {
-                return BadRequest(Constantes.Constants.DataAnnotationsErrorMessages.FormatoIncorrecto);
-            }
-
             try
             {
-                var result = await _BFAService.GetHashDTO(hash);
+                var result = await _BFAService.GetHashDTO(input.HashSHA256);
 
                 if (result == null)
                 {
                     var logWarning = _logService.CrearLog(
                        HttpContext,
-                       hash,
+                       input.HashSHA256,
                        Constantes.Constants.LogMessages.GetHashNoExisteError,
                        null
                    );
@@ -265,7 +253,7 @@ namespace BFASenado.Controllers
 
                 var logSuccess = _logService.CrearLog(
                     HttpContext,
-                    hash,
+                    input.HashSHA256,
                     Constantes.Constants.LogMessages.GetHashSuccess,
                     null
                 );
@@ -277,7 +265,7 @@ namespace BFASenado.Controllers
             {
                 var logError = _logService.CrearLog(
                     HttpContext,
-                    hash,
+                    input.HashSHA256,
                     Constantes.Constants.LogMessages.GetHashError,
                     ex.Message
                 );
@@ -287,11 +275,14 @@ namespace BFASenado.Controllers
             }
         }
 
-        [HttpGet("GetHashesAll")]
-        public async Task<ActionResult<List<GetHashDTO>>> GetHashesAll()
+        [HttpPost("Hashes")]
+        public async Task<ActionResult<List<GetHashDTO>>> Hashes([FromBody] GetHashListDTO input)
         {
+            List<BigInteger> hashesList;
+            
             try
             {
+                LogDTO logSuccess;
                 var account = new Account(PrivateKey, ChainID);
                 var web3 = new Web3(account, UrlNodoPrueba);
                 List<GetHashDTO> hashes = new List<GetHashDTO>();
@@ -302,16 +293,40 @@ namespace BFASenado.Controllers
                 // Cargar el contrato en la dirección especificada
                 var contract = web3.Eth.GetContract(ABI, ContractAddress);
 
-                // Llamar a la función "getAllHashes" del contrato
-                var getAllHashesFunction = contract.GetFunction("getAllHashes");
-                var hashesList = await getAllHashesFunction.CallAsync<List<BigInteger>>();
+                if (input.IdTabla.HasValue || !string.IsNullOrEmpty(input.NombreTabla) || !string.IsNullOrEmpty(input.TipoDocumento))
+                {
+                    // Llamar a la función "getFilteredHashes" con filtros
+                    var getFilteredHashesFunction = contract.GetFunction("getFilteredHashes");
+                    hashesList = await getFilteredHashesFunction.CallAsync<List<BigInteger>>(
+                        input.IdTabla ?? 0,
+                        input.NombreTabla ?? "",
+                        input.TipoDocumento ?? ""
+                    );
+
+                    logSuccess = _logService.CrearLog(
+                        HttpContext, 
+                        new { input.IdTabla, input.NombreTabla, input.TipoDocumento }, 
+                        Constantes.Constants.LogMessages.GetHashesConFiltroSuccess, 
+                        null);
+                }
+                else
+                {
+                    // Sin filtros: Llamar a "getAllHashes"
+                    var getAllHashesFunction = contract.GetFunction("getAllHashes");
+                    hashesList = await getAllHashesFunction.CallAsync<List<BigInteger>>();
+
+                    logSuccess = _logService.CrearLog(
+                        HttpContext,
+                        null,
+                        Constantes.Constants.LogMessages.GetHashesSinFiltroSuccess,
+                        null);
+                }
 
                 // Convertir cada BigInteger en una cadena hexadecimal
                 var hashStrings = hashesList?
                     .Select(h => "0x" + h.ToString("X").ToLower())
                     .ToList();
 
-                // Insertar hashStrings en lista de hashes
                 foreach (var h in hashStrings)
                 {
                     var hashDTO = await _BFAService.GetHashDTO(h);
@@ -321,11 +336,6 @@ namespace BFASenado.Controllers
                     }
                 }
 
-                var logSuccess = _logService.CrearLog(
-                    HttpContext,
-                    null,
-                    Constantes.Constants.LogMessages.GetHashesSinFiltroSuccess,
-                    null);
                 _logger.LogInformation("{@Log}", logSuccess);
 
                 return Ok(hashes);
@@ -333,13 +343,14 @@ namespace BFASenado.Controllers
             catch (Exception ex)
             {
                 var logError = _logService.CrearLog(
-                    HttpContext,
-                    null,
-                    Constantes.Constants.LogMessages.GetHashesSinFiltroError,
+                    HttpContext, 
+                    null, 
+                    Constantes.Constants.LogMessages.GetHashesError, 
                     ex.Message);
+                
                 _logger.LogError("{@Log}", logError);
 
-                return StatusCode(500, $"{Constantes.Constants.LogMessages.GetHashesSinFiltroError}. {ex.Message}");
+                return StatusCode(500, $"{Constantes.Constants.LogMessages.GetHashesError}. {ex.Message}");
             }
         }
 
@@ -363,7 +374,7 @@ namespace BFASenado.Controllers
 
                 // Verificar si el hash ya existe en la DB o en la BFA
                 var transaccionDB = await _transaccionBFAService.GetByHash(input.HashSHA256);
-                
+
                 if (result != null || transaccionDB != null)
                 {
                     var logWarning = _logService.CrearLog(

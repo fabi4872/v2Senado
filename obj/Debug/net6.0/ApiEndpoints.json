@@ -47,16 +47,16 @@
   },
   {
     "ContainingType": "BFASenado.Controllers.BFAController",
-    "Method": "GetHashBaseDatos",
-    "RelativePath": "api/BFA/GetHashBaseDatos",
-    "HttpMethod": "GET",
+    "Method": "HashBaseDatos",
+    "RelativePath": "api/BFA/HashBaseDatos",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "hash",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "input",
+        "Type": "BFASenado.DTO.RequestDTO.GetHashSHA256DTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -73,16 +73,16 @@
   },
   {
     "ContainingType": "BFASenado.Controllers.BFAController",
-    "Method": "GetHashBFA",
-    "RelativePath": "api/BFA/GetHashBFA",
-    "HttpMethod": "GET",
+    "Method": "HashBFA",
+    "RelativePath": "api/BFA/HashBFA",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "hash",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "input",
+        "Type": "BFASenado.DTO.RequestDTO.GetHashSHA256DTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -99,12 +99,18 @@
   },
   {
     "ContainingType": "BFASenado.Controllers.BFAController",
-    "Method": "GetHashesAll",
-    "RelativePath": "api/BFA/GetHashesAll",
-    "HttpMethod": "GET",
+    "Method": "Hashes",
+    "RelativePath": "api/BFA/Hashes",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "BFASenado.DTO.RequestDTO.GetHashListDTO",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[BFASenado.DTO.ResponseDTO.GetHashDTO, BFASenado, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",

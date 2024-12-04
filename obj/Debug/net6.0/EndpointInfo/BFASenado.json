@@ -139,20 +139,35 @@
         }
       }
     },
-    "/api/BFA/GetHashBaseDatos": {
-      "get": {
+    "/api/BFA/HashBaseDatos": {
+      "post": {
         "tags": [
           "BFA"
         ],
-        "parameters": [
-          {
-            "name": "hash",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashSHA256DTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashSHA256DTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashSHA256DTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashSHA256DTO"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -177,20 +192,35 @@
         }
       }
     },
-    "/api/BFA/GetHashBFA": {
-      "get": {
+    "/api/BFA/HashBFA": {
+      "post": {
         "tags": [
           "BFA"
         ],
-        "parameters": [
-          {
-            "name": "hash",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashSHA256DTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashSHA256DTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashSHA256DTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashSHA256DTO"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -215,11 +245,35 @@
         }
       }
     },
-    "/api/BFA/GetHashesAll": {
-      "get": {
+    "/api/BFA/Hashes": {
+      "post": {
         "tags": [
           "BFA"
         ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashListDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashListDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashListDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetHashListDTO"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -374,6 +428,40 @@
           "base64": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetHashListDTO": {
+        "type": "object",
+        "properties": {
+          "idTabla": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "nombreTabla": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoDocumento": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetHashSHA256DTO": {
+        "required": [
+          "hashSHA256"
+        ],
+        "type": "object",
+        "properties": {
+          "hashSHA256": {
+            "maxLength": 64,
+            "minLength": 64,
+            "pattern": "^[a-fA-F0-9]{64}$",
+            "type": "string"
           }
         },
         "additionalProperties": false
