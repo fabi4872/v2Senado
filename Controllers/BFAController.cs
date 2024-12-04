@@ -10,6 +10,7 @@ using BFASenado.Services.Repository;
 using BFASenado.DTO.ResponseDTO;
 using BFASenado.Services.BFA;
 using BFASenado.DTO.LogDTO;
+using Nethereum.Contracts;
 
 namespace BFASenado.Controllers
 {
@@ -415,9 +416,9 @@ namespace BFASenado.Controllers
                             null,
                             objectList,
                             input.IdTabla,
-                            input.NombreTabla,
-                            input.Detalles, // Nueva propiedad
-                            input.TipoDocumento // Nueva propiedad
+                            input.NombreTabla ?? Constantes.Constants.DataMessages.NoRegistra,
+                            input.Detalles ?? Constantes.Constants.DataMessages.NoRegistra,
+                            input.TipoDocumento ?? Constantes.Constants.DataMessages.NoRegistra
                         );
 
                         if (string.IsNullOrEmpty(transactionHash))
@@ -445,6 +446,9 @@ namespace BFASenado.Controllers
                             await _transaccionBFAService.Update(recuperado);
                         }
 
+                        // Guardar masivo
+                        await this.SaveHashMasivo();
+
                         // Retornar
                         return Ok(resultRecuperado);
                     }
@@ -466,16 +470,146 @@ namespace BFASenado.Controllers
             }
             catch (Exception ex)
             {
-                var log = _logService.CrearLog(
+                var logError = _logService.CrearLog(
                     HttpContext,
                     input.HashSHA256,
                     Constantes.Constants.LogMessages.HashGuardarError,
                     ex.Message
                 );
-                _logger.LogError("{@Log}", log);
+                _logger.LogError("{@Log}", logError);
 
                 return StatusCode(500, $"{Constantes.Constants.LogMessages.HashGuardarError}. {ex.Message}");
             }
+        }
+
+        [HttpGet("SaveMasivo")]
+        public async Task<ActionResult<string>> SaveMasivo()
+        {
+            try
+            {
+                string resultString = await this.SaveHashMasivo();
+
+                var logSuccess = _logService.CrearLog(
+                    HttpContext,
+                    null,
+                    resultString,
+                    null
+                );
+                _logger.LogError("{@Log}", logSuccess);
+
+                return Ok(resultString);
+            }
+            catch (Exception ex)
+            {
+                var logError = _logService.CrearLog(
+                    HttpContext,
+                    null,
+                    Constantes.Constants.LogMessages.HashGuardarMasivoError,
+                    ex.Message
+                );
+                _logger.LogError("{@Log}", logError);
+
+                return StatusCode(500, $"{Constantes.Constants.LogMessages.HashGuardarMasivoError}. {ex.Message}");
+            }
+        }
+
+
+
+        // Métodos privados
+        private async Task<string> SaveHashMasivo()
+        {
+            try
+            {
+                int cantidadImpactos = 0;
+                var transacciones = await _transaccionBFAService.GetAll();
+                var transaccionesPendientes = transacciones
+                    .Where(x => x.FechaAltaBFA == null && x.SnAltaBFA == false)
+                    .OrderBy(x => x.FechaAltaBFA ?? DateTime.MinValue);
+                
+                var account = new Account(PrivateKey);
+                var web3 = new Web3(account, UrlNodoPrueba);
+                web3.TransactionManager.UseLegacyAsDefault = true;
+
+                var contract = web3.Eth.GetContract(ABI, ContractAddress);
+                var putFunction = contract.GetFunction("put");
+
+                foreach (var tr in transaccionesPendientes)
+                {
+                    if (await VerificarBFAYActualizarDB(tr))
+                    {
+                        cantidadImpactos++;
+                        continue;
+                    }
+
+                    if (await GuardarEnBFA(tr, putFunction, account))
+                    {
+                        cantidadImpactos++;
+                    }
+                }
+
+                return $"{Constantes.Constants.LogMessages.HashGuardarMasivoSuccess}. Cantidad de impactos: {cantidadImpactos}";
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private async Task<bool> VerificarBFAYActualizarDB(TransaccionBFA tr)
+        {
+            var encontrado = await _BFAService.GetHashDTO(tr.HashSHA256);
+
+            if (encontrado != null)
+            {
+                tr.FechaAltaBFA = encontrado.FechaAlta;
+                tr.SnAltaBFA = true;
+                await _transaccionBFAService.Update(tr);
+                return true;
+            }
+
+            return false;
+        }
+
+        private async Task<bool> GuardarEnBFA(TransaccionBFA tr, Function putFunction, Account account)
+        {
+            try
+            {
+                BigInteger hashValue = tr.HashSHA256.HexToBigInteger(false);
+                var objectList = new List<BigInteger> { hashValue };
+                var transactionHash = await putFunction.SendTransactionAsync(
+                    account.Address,
+                    new Nethereum.Hex.HexTypes.HexBigInteger(300000),
+                    null,
+                    objectList,
+                    tr.IdTabla,
+                    tr.NombreTabla ?? Constantes.Constants.DataMessages.NoRegistra,
+                    tr.Detalles ?? Constantes.Constants.DataMessages.NoRegistra,
+                    tr.TipoDocumento ?? Constantes.Constants.DataMessages.NoRegistra    
+                );
+
+                if (!string.IsNullOrEmpty(transactionHash))
+                {
+                    return await VerificarBFAYActualizarDB(tr);
+                }
+
+                _logger.LogError("{@Log}", _logService.CrearLog(
+                    HttpContext,
+                    tr.HashSHA256,
+                    Constantes.Constants.LogMessages.HashGuardarError,
+                    null
+                ));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("{@Log}", _logService.CrearLog(
+                    HttpContext,
+                    tr.HashSHA256,
+                    Constantes.Constants.LogMessages.HashGuardarError,
+                    ex.Message
+                ));
+            }
+
+            return false;
         }
 
         #endregion

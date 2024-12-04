@@ -1,0 +1,377 @@
+2024-12-04T00:23:46.3308813-03:00  [FTL] Application startup exception (6c57a5ba)
+System.InvalidOperationException: Cannot resolve 'BFASenado.Services.BFA.IBFAService' from root provider because it requires scoped service 'BFASenado.Models.BFAContext'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2024-12-04T00:24:19.9901376-03:00  [FTL] Application startup exception (6c57a5ba)
+System.InvalidOperationException: Cannot resolve 'BFASenado.Services.BFA.IBFAService' from root provider because it requires scoped service 'BFASenado.Models.BFAContext'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2024-12-04T00:25:49.2626718-03:00  [FTL] Application startup exception (6c57a5ba)
+System.InvalidOperationException: Cannot resolve 'BFASenado.Services.BFA.IBFAService' from root provider because it requires scoped service 'BFASenado.Models.BFAContext'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2024-12-04T00:28:36.9319637-03:00  [FTL] Application startup exception (6c57a5ba)
+System.InvalidOperationException: Cannot resolve scoped service 'BFASenado.Services.BFA.IBFAService' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2024-12-04T00:28:59.7911624-03:00  [FTL] Application startup exception (6c57a5ba)
+System.InvalidOperationException: Cannot resolve scoped service 'BFASenado.Services.BFA.IBFAService' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+2024-12-04T00:38:13.0367191-03:00  [INF] Now listening on: "https://localhost:7070" (d826f4b8)
+2024-12-04T00:38:13.0419912-03:00  [INF] Now listening on: "http://localhost:5232" (d826f4b8)
+2024-12-04T00:38:13.1960954-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-04T00:38:13.1997256-03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-12-04T00:38:13.2014926-03:00  [INF] Content root path: "E:\PROYECTOS\BFA-API\" (b5d60022)
+2024-12-04T00:38:13.6457771-03:00 0HN8K2KAEK2MB:00000001 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - - (ca22a1cb)
+2024-12-04T00:38:13.8756465-03:00 0HN8K2KAEK2MB:00000001 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - - - 200 - text/html;charset=utf-8 233.3029ms (791a596a)
+2024-12-04T00:38:13.8830181-03:00 0HN8K2KAEK2MB:00000003 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2024-12-04T00:38:13.8876684-03:00 0HN8K2KAEK2MB:00000003 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 4.6267ms (791a596a)
+2024-12-04T00:38:13.8940175-03:00 0HN8K2KAEK2MB:00000005 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - - (ca22a1cb)
+2024-12-04T00:38:13.9508773-03:00 0HN8K2KAEK2MB:00000005 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.8642ms (791a596a)
+2024-12-04T00:38:13.9813935-03:00 0HN8K2KAEK2MB:00000007 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - (ca22a1cb)
+2024-12-04T00:38:13.9888694-03:00 0HN8K2KAEK2MB:00000007 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.5096ms (791a596a)
+2024-12-04T00:38:29.4020090-03:00 0HN8K2KAEK2MB:00000009 [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryF6teruNvJ6NXMrsa 54802 (ca22a1cb)
+2024-12-04T00:38:29.5923622-03:00 0HN8K2KAEK2MB:00000009 [INF] Executing endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (500cc934)
+2024-12-04T00:38:29.6214799-03:00 0HN8K2KAEK2MB:00000009 [INF] Route matched with "{action = \"ArchivoData\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetFileDTO]] ArchivoData(Microsoft.AspNetCore.Http.IFormFile)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:38:30.4609760-03:00 0HN8K2KAEK2MB:00000009 [INF] LogDTO { Fecha: 12/04/2024 00:38:30, Endpoint: "/api/BFA/ArchivoData", MetodoHttp: "POST", DatosRecibidos: { FileName: "SMG Vida 27260300232_011_00003_00000566 (1)_unlocked-1-3.pdf", Length: 54563 }, Mensaje: "Propiedades de archivo obtenidas correctamente", Detalles: null } (60b9aab8)
+2024-12-04T00:38:30.4714184-03:00 0HN8K2KAEK2MB:00000009 [INF] Executing "OkObjectResult", writing value of type '"BFASenado.DTO.ResponseDTO.GetFileDTO"'. (605b4265)
+2024-12-04T00:38:30.6212116-03:00 0HN8K2KAEK2MB:00000009 [INF] Executed action "BFASenado.Controllers.BFAController.ArchivoData (BFASenado)" in 995.4285ms (afa2e885)
+2024-12-04T00:38:30.6218355-03:00 0HN8K2KAEK2MB:00000009 [INF] Executed endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (99874f2b)
+2024-12-04T00:38:30.6280456-03:00 0HN8K2KAEK2MB:00000009 [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryF6teruNvJ6NXMrsa 54802 - 200 72845 application/json;+charset=utf-8 1226.0225ms (791a596a)
+2024-12-04T00:40:07.6317368-03:00 0HN8K2KAEK2MB:0000000B [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 72961 (ca22a1cb)
+2024-12-04T00:40:07.7659337-03:00 0HN8K2KAEK2MB:0000000B [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (500cc934)
+2024-12-04T00:40:07.7683807-03:00 0HN8K2KAEK2MB:0000000B [INF] Route matched with "{action = \"SaveHash\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetHashDTO]] SaveHash(BFASenado.DTO.RequestDTO.GuardarHashDTO)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:40:13.7704800-03:00 0HN8K2KAEK2MB:0000000B [INF] Executed DbCommand ("124"ms) [Parameters=["@__hashSHA256_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]
+WHERE [t].[HashSHA256] = @__hashSHA256_0" (0723d8ff)
+2024-12-04T00:40:14.0350798-03:00 0HN8K2KAEK2MB:0000000B [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. (f90d6462)
+2024-12-04T00:40:14.0566384-03:00 0HN8K2KAEK2MB:0000000B [INF] Executed DbCommand ("13"ms) [Parameters=["@p0='?' (Size = -1) (DbType = AnsiString), @p1='?' (Size = 100), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int64), @p7='?' (Size = 100), @p8='?' (DbType = Boolean), @p9='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransaccionBFA] ([Base64], [Detalles], [FechaAltaBFA], [FechaAltaTabla], [HashHexa], [HashSHA256], [IdTabla], [NombreTabla], [SnAltaBFA], [TipoDocumento])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);" (0723d8ff)
+2024-12-04T00:40:14.9028832-03:00 0HN8K2KAEK2MB:0000000B [INF] LogDTO { Fecha: 12/04/2024 00:40:14, Endpoint: "/api/BFA/SaveHash", MetodoHttp: "POST", DatosRecibidos: "332bc6a3ba70aaeaccee380459c8a3af0cc42ebee551b1ab67c1633c2b2d7652", Mensaje: "Transacción guardada en la BFA correctamente", Detalles: null } (60b9aab8)
+2024-12-04T00:40:14.9550346-03:00 0HN8K2KAEK2MB:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=["@__hashSHA256_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]
+WHERE [t].[HashSHA256] = @__hashSHA256_0" (0723d8ff)
+2024-12-04T00:40:14.9690942-03:00 0HN8K2KAEK2MB:0000000B [INF] Executing "OkObjectResult", writing value of type '"BFASenado.DTO.ResponseDTO.GetHashDTO"'. (605b4265)
+2024-12-04T00:40:14.9734641-03:00 0HN8K2KAEK2MB:0000000B [INF] Executed action "BFASenado.Controllers.BFAController.SaveHash (BFASenado)" in 7204.9915ms (afa2e885)
+2024-12-04T00:40:14.9735344-03:00 0HN8K2KAEK2MB:0000000B [INF] Executed endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (99874f2b)
+2024-12-04T00:40:14.9861230-03:00 0HN8K2KAEK2MB:0000000B [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 72961 - 200 306 application/json;+charset=utf-8 7354.4363ms (791a596a)
+2024-12-04T00:41:09.4498214-03:00 0HN8K2KAEK2MB:0000000D [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/HashBFA application/json-patch+json 86 (ca22a1cb)
+2024-12-04T00:41:09.5582663-03:00 0HN8K2KAEK2MB:0000000D [INF] Executing endpoint '"BFASenado.Controllers.BFAController.HashBFA (BFASenado)"' (500cc934)
+2024-12-04T00:41:09.5708239-03:00 0HN8K2KAEK2MB:0000000D [INF] Route matched with "{action = \"HashBFA\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetHashDTO]] HashBFA(BFASenado.DTO.RequestDTO.GetHashSHA256DTO)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:41:09.6207220-03:00 0HN8K2KAEK2MB:0000000D [INF] LogDTO { Fecha: 12/04/2024 00:41:09, Endpoint: "/api/BFA/HashBFA", MetodoHttp: "POST", DatosRecibidos: "332bc6a3ba70aaeaccee380459c8a3af0cc42ebee551b1ab67c1633c2b2d7652", Mensaje: "Hash obtenido correctamente", Detalles: null } (60b9aab8)
+2024-12-04T00:41:09.6209223-03:00 0HN8K2KAEK2MB:0000000D [INF] Executing "OkObjectResult", writing value of type '"BFASenado.DTO.ResponseDTO.GetHashDTO"'. (605b4265)
+2024-12-04T00:41:09.6211438-03:00 0HN8K2KAEK2MB:0000000D [INF] Executed action "BFASenado.Controllers.BFAController.HashBFA (BFASenado)" in 50.1155ms (afa2e885)
+2024-12-04T00:41:09.6211868-03:00 0HN8K2KAEK2MB:0000000D [INF] Executed endpoint '"BFASenado.Controllers.BFAController.HashBFA (BFASenado)"' (99874f2b)
+2024-12-04T00:41:09.6214147-03:00 0HN8K2KAEK2MB:0000000D [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/HashBFA application/json-patch+json 86 - 200 306 application/json;+charset=utf-8 172.2814ms (791a596a)
+2024-12-04T00:41:21.8354373-03:00 0HN8K2KAEK2MB:0000000F [INF] Request starting HTTP/2 GET https://localhost:7070/api/BFA/SaveMasivo - - (ca22a1cb)
+2024-12-04T00:41:21.9424770-03:00 0HN8K2KAEK2MB:0000000F [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)"' (500cc934)
+2024-12-04T00:41:21.9444421-03:00 0HN8K2KAEK2MB:0000000F [INF] Route matched with "{action = \"SaveMasivo\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] SaveMasivo()" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:41:21.9748623-03:00 0HN8K2KAEK2MB:0000000F [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]" (0723d8ff)
+2024-12-04T00:41:22.0338739-03:00 0HN8K2KAEK2MB:0000000F [INF] Executed DbCommand ("9"ms) [Parameters=["@p10='?' (DbType = Int64), @p0='?' (Size = -1) (DbType = AnsiString), @p1='?' (Size = 100), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int64), @p7='?' (Size = 100), @p8='?' (DbType = Boolean), @p9='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [TransaccionBFA] SET [Base64] = @p0, [Detalles] = @p1, [FechaAltaBFA] = @p2, [FechaAltaTabla] = @p3, [HashHexa] = @p4, [HashSHA256] = @p5, [IdTabla] = @p6, [NombreTabla] = @p7, [SnAltaBFA] = @p8, [TipoDocumento] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;" (0723d8ff)
+2024-12-04T00:41:22.0406871-03:00 0HN8K2KAEK2MB:0000000F [ERR] LogDTO { Fecha: 12/04/2024 00:41:22, Endpoint: "/api/BFA/SaveMasivo", MetodoHttp: "GET", DatosRecibidos: null, Mensaje: "Guardado masivo de hashes realizado correctamente. Cantidad de impactos: 1", Detalles: null } (60b9aab8)
+2024-12-04T00:41:22.0408128-03:00 0HN8K2KAEK2MB:0000000F [INF] Executing "OkObjectResult", writing value of type '"System.String"'. (605b4265)
+2024-12-04T00:41:22.0409890-03:00 0HN8K2KAEK2MB:0000000F [INF] Executed action "BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)" in 96.503ms (afa2e885)
+2024-12-04T00:41:22.0410191-03:00 0HN8K2KAEK2MB:0000000F [INF] Executed endpoint '"BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)"' (99874f2b)
+2024-12-04T00:41:22.0411890-03:00 0HN8K2KAEK2MB:0000000F [INF] Request finished HTTP/2 GET https://localhost:7070/api/BFA/SaveMasivo - - - 200 - text/plain;+charset=utf-8 205.9490ms (791a596a)
+2024-12-04T00:48:46.3108015-03:00 0HN8K2KAEK2MB:00000011 [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryJejR52w05BBiO22B 173659 (ca22a1cb)
+2024-12-04T00:48:46.4434547-03:00 0HN8K2KAEK2MB:00000011 [INF] Executing endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (500cc934)
+2024-12-04T00:48:46.4436153-03:00 0HN8K2KAEK2MB:00000011 [INF] Route matched with "{action = \"ArchivoData\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetFileDTO]] ArchivoData(Microsoft.AspNetCore.Http.IFormFile)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:48:46.4637756-03:00 0HN8K2KAEK2MB:00000011 [INF] LogDTO { Fecha: 12/04/2024 00:48:46, Endpoint: "/api/BFA/ArchivoData", MetodoHttp: "POST", DatosRecibidos: { FileName: "Sello de Tiempo 2.0 - Blockchain Federal Argentina.pdf", Length: 173426 }, Mensaje: "Propiedades de archivo obtenidas correctamente", Detalles: null } (60b9aab8)
+2024-12-04T00:48:46.4639164-03:00 0HN8K2KAEK2MB:00000011 [INF] Executing "OkObjectResult", writing value of type '"BFASenado.DTO.ResponseDTO.GetFileDTO"'. (605b4265)
+2024-12-04T00:48:46.4966971-03:00 0HN8K2KAEK2MB:00000011 [INF] Executed action "BFASenado.Controllers.BFAController.ArchivoData (BFASenado)" in 53.0066ms (afa2e885)
+2024-12-04T00:48:46.4967899-03:00 0HN8K2KAEK2MB:00000011 [INF] Executed endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (99874f2b)
+2024-12-04T00:48:46.4974408-03:00 0HN8K2KAEK2MB:00000011 [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryJejR52w05BBiO22B 173659 - 200 231329 application/json;+charset=utf-8 186.6405ms (791a596a)
+2024-12-04T00:48:59.5292360-03:00 0HN8K2KAEK2MB:00000013 [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryjYjsxjYx9Uou1MD8 180463 (ca22a1cb)
+2024-12-04T00:48:59.6229914-03:00 0HN8K2KAEK2MB:00000013 [INF] Executing endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (500cc934)
+2024-12-04T00:48:59.6230742-03:00 0HN8K2KAEK2MB:00000013 [INF] Route matched with "{action = \"ArchivoData\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetFileDTO]] ArchivoData(Microsoft.AspNetCore.Http.IFormFile)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:48:59.6327973-03:00 0HN8K2KAEK2MB:00000013 [INF] LogDTO { Fecha: 12/04/2024 00:48:59, Endpoint: "/api/BFA/ArchivoData", MetodoHttp: "POST", DatosRecibidos: { FileName: "Home Page - ProyectoDocucenter17.pdf", Length: 180248 }, Mensaje: "Propiedades de archivo obtenidas correctamente", Detalles: null } (60b9aab8)
+2024-12-04T00:48:59.6329630-03:00 0HN8K2KAEK2MB:00000013 [INF] Executing "OkObjectResult", writing value of type '"BFASenado.DTO.ResponseDTO.GetFileDTO"'. (605b4265)
+2024-12-04T00:48:59.6498687-03:00 0HN8K2KAEK2MB:00000013 [INF] Executed action "BFASenado.Controllers.BFAController.ArchivoData (BFASenado)" in 26.7463ms (afa2e885)
+2024-12-04T00:48:59.6499090-03:00 0HN8K2KAEK2MB:00000013 [INF] Executed endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (99874f2b)
+2024-12-04T00:48:59.6501935-03:00 0HN8K2KAEK2MB:00000013 [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryjYjsxjYx9Uou1MD8 180463 - 200 240425 application/json;+charset=utf-8 121.0205ms (791a596a)
+2024-12-04T00:50:16.8846924-03:00 0HN8K2KAEK2MB:00000015 [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 240542 (ca22a1cb)
+2024-12-04T00:50:16.9868746-03:00 0HN8K2KAEK2MB:00000015 [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (500cc934)
+2024-12-04T00:50:16.9869742-03:00 0HN8K2KAEK2MB:00000015 [INF] Route matched with "{action = \"SaveHash\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetHashDTO]] SaveHash(BFASenado.DTO.RequestDTO.GuardarHashDTO)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:50:17.0568669-03:00 0HN8K2KAEK2MB:00000015 [INF] Executed DbCommand ("2"ms) [Parameters=["@__hashSHA256_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]
+WHERE [t].[HashSHA256] = @__hashSHA256_0" (0723d8ff)
+2024-12-04T00:50:17.0601571-03:00 0HN8K2KAEK2MB:00000015 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. (f90d6462)
+2024-12-04T00:50:17.0660552-03:00 0HN8K2KAEK2MB:00000015 [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='?' (Size = -1) (DbType = AnsiString), @p1='?' (Size = 100), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int64), @p7='?' (Size = 100), @p8='?' (DbType = Boolean), @p9='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransaccionBFA] ([Base64], [Detalles], [FechaAltaBFA], [FechaAltaTabla], [HashHexa], [HashSHA256], [IdTabla], [NombreTabla], [SnAltaBFA], [TipoDocumento])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);" (0723d8ff)
+2024-12-04T00:50:17.1102413-03:00 0HN8K2KAEK2MB:00000015 [INF] LogDTO { Fecha: 12/04/2024 00:50:17, Endpoint: "/api/BFA/SaveHash", MetodoHttp: "POST", DatosRecibidos: "cd11dfaf793ae83a22137f697bb1ea816133e73647f36fbf1c780578c507a17c", Mensaje: "Transacción guardada en la BFA correctamente", Detalles: null } (60b9aab8)
+2024-12-04T00:50:17.1357302-03:00 0HN8K2KAEK2MB:00000015 [INF] Executed DbCommand ("1"ms) [Parameters=["@__hashSHA256_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]
+WHERE [t].[HashSHA256] = @__hashSHA256_0" (0723d8ff)
+2024-12-04T00:50:17.1384893-03:00 0HN8K2KAEK2MB:00000015 [INF] Executing "OkObjectResult", writing value of type '"BFASenado.DTO.ResponseDTO.GetHashDTO"'. (605b4265)
+2024-12-04T00:50:17.1387238-03:00 0HN8K2KAEK2MB:00000015 [INF] Executed action "BFASenado.Controllers.BFAController.SaveHash (BFASenado)" in 151.6987ms (afa2e885)
+2024-12-04T00:50:17.1387646-03:00 0HN8K2KAEK2MB:00000015 [INF] Executed endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (99874f2b)
+2024-12-04T00:50:17.1393296-03:00 0HN8K2KAEK2MB:00000015 [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 240542 - 200 307 application/json;+charset=utf-8 255.5089ms (791a596a)
+2024-12-04T00:50:20.0920106-03:00 0HN8K2KAEK2MB:00000017 [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 240542 (ca22a1cb)
+2024-12-04T00:50:20.1974285-03:00 0HN8K2KAEK2MB:00000017 [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (500cc934)
+2024-12-04T00:50:20.1975260-03:00 0HN8K2KAEK2MB:00000017 [INF] Route matched with "{action = \"SaveHash\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetHashDTO]] SaveHash(BFASenado.DTO.RequestDTO.GuardarHashDTO)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:50:20.2342452-03:00 0HN8K2KAEK2MB:00000017 [INF] Executed DbCommand ("1"ms) [Parameters=["@__hashSHA256_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]
+WHERE [t].[HashSHA256] = @__hashSHA256_0" (0723d8ff)
+2024-12-04T00:50:20.2392108-03:00 0HN8K2KAEK2MB:00000017 [WRN] LogDTO { Fecha: 12/04/2024 00:50:20, Endpoint: "/api/BFA/SaveHash", MetodoHttp: "POST", DatosRecibidos: "cd11dfaf793ae83a22137f697bb1ea816133e73647f36fbf1c780578c507a17c", Mensaje: "Intento de guardar un hash duplicado", Detalles: null } (60b9aab8)
+2024-12-04T00:50:20.2394629-03:00 0HN8K2KAEK2MB:00000017 [INF] Executing "BadRequestObjectResult", writing value of type '"System.String"'. (605b4265)
+2024-12-04T00:50:20.2395828-03:00 0HN8K2KAEK2MB:00000017 [INF] Executed action "BFASenado.Controllers.BFAController.SaveHash (BFASenado)" in 42.0144ms (afa2e885)
+2024-12-04T00:50:20.2396149-03:00 0HN8K2KAEK2MB:00000017 [INF] Executed endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (99874f2b)
+2024-12-04T00:50:20.2400686-03:00 0HN8K2KAEK2MB:00000017 [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 240542 - 400 - text/plain;+charset=utf-8 148.0629ms (791a596a)
+2024-12-04T00:52:03.1441618-03:00 0HN8K2KAEK2MB:00000019 [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryP7LLxIPKxPtCpedd 801 (ca22a1cb)
+2024-12-04T00:52:03.2536335-03:00 0HN8K2KAEK2MB:00000019 [INF] Executing endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (500cc934)
+2024-12-04T00:52:03.2537161-03:00 0HN8K2KAEK2MB:00000019 [INF] Route matched with "{action = \"ArchivoData\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetFileDTO]] ArchivoData(Microsoft.AspNetCore.Http.IFormFile)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:52:03.2557425-03:00 0HN8K2KAEK2MB:00000019 [INF] LogDTO { Fecha: 12/04/2024 00:52:03, Endpoint: "/api/BFA/ArchivoData", MetodoHttp: "POST", DatosRecibidos: { FileName: "Paquetes Necesarios.txt", Length: 604 }, Mensaje: "Propiedades de archivo obtenidas correctamente", Detalles: null } (60b9aab8)
+2024-12-04T00:52:03.2559107-03:00 0HN8K2KAEK2MB:00000019 [INF] Executing "OkObjectResult", writing value of type '"BFASenado.DTO.ResponseDTO.GetFileDTO"'. (605b4265)
+2024-12-04T00:52:03.2560861-03:00 0HN8K2KAEK2MB:00000019 [INF] Executed action "BFASenado.Controllers.BFAController.ArchivoData (BFASenado)" in 2.3324ms (afa2e885)
+2024-12-04T00:52:03.2561212-03:00 0HN8K2KAEK2MB:00000019 [INF] Executed endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (99874f2b)
+2024-12-04T00:52:03.2562869-03:00 0HN8K2KAEK2MB:00000019 [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryP7LLxIPKxPtCpedd 801 - 200 901 application/json;+charset=utf-8 112.1500ms (791a596a)
+2024-12-04T00:53:01.5847239-03:00 0HN8K2KAEK2MB:0000001B [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 1017 (ca22a1cb)
+2024-12-04T00:53:01.7267834-03:00 0HN8K2KAEK2MB:0000001B [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (500cc934)
+2024-12-04T00:53:01.7268607-03:00 0HN8K2KAEK2MB:0000001B [INF] Route matched with "{action = \"SaveHash\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetHashDTO]] SaveHash(BFASenado.DTO.RequestDTO.GuardarHashDTO)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:53:01.7536480-03:00 0HN8K2KAEK2MB:0000001B [INF] Executed DbCommand ("9"ms) [Parameters=["@__hashSHA256_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]
+WHERE [t].[HashSHA256] = @__hashSHA256_0" (0723d8ff)
+2024-12-04T00:53:01.7615278-03:00 0HN8K2KAEK2MB:0000001B [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. (f90d6462)
+2024-12-04T00:53:01.7649408-03:00 0HN8K2KAEK2MB:0000001B [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (Size = 8000) (DbType = AnsiString), @p1='?' (Size = 100), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int64), @p7='?' (Size = 100), @p8='?' (DbType = Boolean), @p9='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransaccionBFA] ([Base64], [Detalles], [FechaAltaBFA], [FechaAltaTabla], [HashHexa], [HashSHA256], [IdTabla], [NombreTabla], [SnAltaBFA], [TipoDocumento])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);" (0723d8ff)
+2024-12-04T00:53:01.8174369-03:00 0HN8K2KAEK2MB:0000001B [INF] LogDTO { Fecha: 12/04/2024 00:53:01, Endpoint: "/api/BFA/SaveHash", MetodoHttp: "POST", DatosRecibidos: "c2ac5e8f8e99b69221f731566dc76e15554df63f52a3074489a00f401856050a", Mensaje: "Transacción guardada en la BFA correctamente", Detalles: null } (60b9aab8)
+2024-12-04T00:53:01.8479990-03:00 0HN8K2KAEK2MB:0000001B [INF] Executed DbCommand ("1"ms) [Parameters=["@__hashSHA256_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]
+WHERE [t].[HashSHA256] = @__hashSHA256_0" (0723d8ff)
+2024-12-04T00:53:01.8482615-03:00 0HN8K2KAEK2MB:0000001B [INF] Executing "OkObjectResult", writing value of type '"BFASenado.DTO.ResponseDTO.GetHashDTO"'. (605b4265)
+2024-12-04T00:53:01.8484732-03:00 0HN8K2KAEK2MB:0000001B [INF] Executed action "BFASenado.Controllers.BFAController.SaveHash (BFASenado)" in 121.567ms (afa2e885)
+2024-12-04T00:53:01.8485283-03:00 0HN8K2KAEK2MB:0000001B [INF] Executed endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (99874f2b)
+2024-12-04T00:53:01.8487215-03:00 0HN8K2KAEK2MB:0000001B [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 1017 - 200 306 application/json;+charset=utf-8 263.9926ms (791a596a)
+2024-12-04T00:54:44.1271579-03:00  [INF] Now listening on: "https://localhost:7070" (d826f4b8)
+2024-12-04T00:54:44.1328031-03:00  [INF] Now listening on: "http://localhost:5232" (d826f4b8)
+2024-12-04T00:54:44.3150004-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-04T00:54:44.3200114-03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-12-04T00:54:44.3218027-03:00  [INF] Content root path: "E:\PROYECTOS\BFA-API\" (b5d60022)
+2024-12-04T00:54:44.6591504-03:00 0HN8K2THPOBK6:00000001 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - - (ca22a1cb)
+2024-12-04T00:54:44.8923902-03:00 0HN8K2THPOBK6:00000001 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - - - 200 - text/html;charset=utf-8 236.3181ms (791a596a)
+2024-12-04T00:54:44.9042755-03:00 0HN8K2THPOBK6:00000003 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2024-12-04T00:54:44.9077161-03:00 0HN8K2THPOBK6:00000003 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 3.4495ms (791a596a)
+2024-12-04T00:54:44.9226092-03:00 0HN8K2THPOBK6:00000005 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - - (ca22a1cb)
+2024-12-04T00:54:44.9711812-03:00 0HN8K2THPOBK6:00000005 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.6271ms (791a596a)
+2024-12-04T00:54:45.0012158-03:00 0HN8K2THPOBK6:00000007 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - (ca22a1cb)
+2024-12-04T00:54:45.0068875-03:00 0HN8K2THPOBK6:00000007 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.7900ms (791a596a)
+2024-12-04T00:59:26.9543233-03:00  [INF] Now listening on: "https://localhost:7070" (d826f4b8)
+2024-12-04T00:59:26.9596165-03:00  [INF] Now listening on: "http://localhost:5232" (d826f4b8)
+2024-12-04T00:59:27.1192702-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-04T00:59:27.1217438-03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-12-04T00:59:27.1233506-03:00  [INF] Content root path: "E:\PROYECTOS\BFA-API\" (b5d60022)
+2024-12-04T00:59:27.5729906-03:00 0HN8K3063SH8R:00000001 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - - (ca22a1cb)
+2024-12-04T00:59:27.8308129-03:00 0HN8K3063SH8R:00000001 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - - - 200 - text/html;charset=utf-8 262.1327ms (791a596a)
+2024-12-04T00:59:27.8390696-03:00 0HN8K3063SH8R:00000003 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2024-12-04T00:59:27.8434348-03:00 0HN8K3063SH8R:00000003 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 4.3396ms (791a596a)
+2024-12-04T00:59:27.8508812-03:00 0HN8K3063SH8R:00000005 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - - (ca22a1cb)
+2024-12-04T00:59:27.9035570-03:00 0HN8K3063SH8R:00000005 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.6923ms (791a596a)
+2024-12-04T00:59:27.9358353-03:00 0HN8K3063SH8R:00000007 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - (ca22a1cb)
+2024-12-04T00:59:27.9445430-03:00 0HN8K3063SH8R:00000007 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.7298ms (791a596a)
+2024-12-04T00:59:47.1808016-03:00 0HN8K3063SH8R:00000009 [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryhDFvzXU5lPe0ZiDD 1077 (ca22a1cb)
+2024-12-04T00:59:47.3937688-03:00 0HN8K3063SH8R:00000009 [INF] Executing endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (500cc934)
+2024-12-04T00:59:47.4235547-03:00 0HN8K3063SH8R:00000009 [INF] Route matched with "{action = \"ArchivoData\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetFileDTO]] ArchivoData(Microsoft.AspNetCore.Http.IFormFile)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T00:59:47.6072250-03:00 0HN8K3063SH8R:00000009 [INF] LogDTO { Fecha: 12/04/2024 00:59:47, Endpoint: "/api/BFA/ArchivoData", MetodoHttp: "POST", DatosRecibidos: { FileName: "Scaffold DbContext Connection.txt", Length: 870 }, Mensaje: "Propiedades de archivo obtenidas correctamente", Detalles: null } (60b9aab8)
+2024-12-04T00:59:47.6162661-03:00 0HN8K3063SH8R:00000009 [INF] Executing "OkObjectResult", writing value of type '"BFASenado.DTO.ResponseDTO.GetFileDTO"'. (605b4265)
+2024-12-04T00:59:47.7387927-03:00 0HN8K3063SH8R:00000009 [INF] Executed action "BFASenado.Controllers.BFAController.ArchivoData (BFASenado)" in 310.8764ms (afa2e885)
+2024-12-04T00:59:47.7388631-03:00 0HN8K3063SH8R:00000009 [INF] Executed endpoint '"BFASenado.Controllers.BFAController.ArchivoData (BFASenado)"' (99874f2b)
+2024-12-04T00:59:47.7441029-03:00 0HN8K3063SH8R:00000009 [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/ArchivoData multipart/form-data;+boundary=----WebKitFormBoundaryhDFvzXU5lPe0ZiDD 1077 - 200 1253 application/json;+charset=utf-8 563.2618ms (791a596a)
+2024-12-04T01:00:29.7330566-03:00 0HN8K3063SH8R:0000000B [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 1331 (ca22a1cb)
+2024-12-04T01:00:29.8682447-03:00 0HN8K3063SH8R:0000000B [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (500cc934)
+2024-12-04T01:00:29.8819108-03:00 0HN8K3063SH8R:0000000B [INF] Route matched with "{action = \"SaveHash\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[BFASenado.DTO.ResponseDTO.GetHashDTO]] SaveHash(BFASenado.DTO.RequestDTO.GuardarHashDTO)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T01:00:31.7078153-03:00 0HN8K3063SH8R:0000000B [INF] Executed DbCommand ("84"ms) [Parameters=["@__hashSHA256_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]
+WHERE [t].[HashSHA256] = @__hashSHA256_0" (0723d8ff)
+2024-12-04T01:00:31.9836236-03:00 0HN8K3063SH8R:0000000B [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'. (f90d6462)
+2024-12-04T01:00:32.0004651-03:00 0HN8K3063SH8R:0000000B [INF] Executed DbCommand ("8"ms) [Parameters=["@p0='?' (Size = 8000) (DbType = AnsiString), @p1='?' (Size = 100), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int64), @p7='?' (Size = 100), @p8='?' (DbType = Boolean), @p9='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [TransaccionBFA] ([Base64], [Detalles], [FechaAltaBFA], [FechaAltaTabla], [HashHexa], [HashSHA256], [IdTabla], [NombreTabla], [SnAltaBFA], [TipoDocumento])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);" (0723d8ff)
+2024-12-04T01:00:32.0580898-03:00 0HN8K3063SH8R:0000000B [INF] LogDTO { Fecha: 12/04/2024 01:00:32, Endpoint: "/api/BFA/SaveHash", MetodoHttp: "POST", DatosRecibidos: "c6886ce4db3e875563bffb1306499ade7374f6756a2f809da72285fb6075ed18", Mensaje: "Transacción guardada en la BFA correctamente", Detalles: null } (60b9aab8)
+2024-12-04T01:00:32.0741376-03:00 0HN8K3063SH8R:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=["@__hashSHA256_0='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]
+WHERE [t].[HashSHA256] = @__hashSHA256_0" (0723d8ff)
+2024-12-04T01:00:32.0912494-03:00 0HN8K3063SH8R:0000000B [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]" (0723d8ff)
+2024-12-04T01:00:32.2173659-03:00 0HN8K3063SH8R:0000000B [INF] Executed DbCommand ("15"ms) [Parameters=["@p10='?' (DbType = Int64), @p0='?' (Size = -1) (DbType = AnsiString), @p1='?' (Size = 100), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int64), @p7='?' (Size = 100), @p8='?' (DbType = Boolean), @p9='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [TransaccionBFA] SET [Base64] = @p0, [Detalles] = @p1, [FechaAltaBFA] = @p2, [FechaAltaTabla] = @p3, [HashHexa] = @p4, [HashSHA256] = @p5, [IdTabla] = @p6, [NombreTabla] = @p7, [SnAltaBFA] = @p8, [TipoDocumento] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;" (0723d8ff)
+2024-12-04T01:00:32.2440515-03:00 0HN8K3063SH8R:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=["@p10='?' (DbType = Int64), @p0='?' (Size = 8000) (DbType = AnsiString), @p1='?' (Size = 100), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int64), @p7='?' (Size = 100), @p8='?' (DbType = Boolean), @p9='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [TransaccionBFA] SET [Base64] = @p0, [Detalles] = @p1, [FechaAltaBFA] = @p2, [FechaAltaTabla] = @p3, [HashHexa] = @p4, [HashSHA256] = @p5, [IdTabla] = @p6, [NombreTabla] = @p7, [SnAltaBFA] = @p8, [TipoDocumento] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;" (0723d8ff)
+2024-12-04T01:00:32.3338089-03:00 0HN8K3063SH8R:0000000B [ERR] LogDTO { Fecha: 12/04/2024 01:00:32, Endpoint: "/api/BFA/SaveHash", MetodoHttp: "POST", DatosRecibidos: "c6886ce4db3e875563bffb1306499ade7374f6756a2f809da72285fb6075ed18", Mensaje: "Error al guardar el hash", Detalles: "String value expected for type 'string'" } (60b9aab8)
+2024-12-04T01:00:32.3393316-03:00 0HN8K3063SH8R:0000000B [INF] Executing "OkObjectResult", writing value of type '"null"'. (605b4265)
+2024-12-04T01:00:32.3399875-03:00 0HN8K3063SH8R:0000000B [INF] Executed action "BFASenado.Controllers.BFAController.SaveHash (BFASenado)" in 2457.8028ms (afa2e885)
+2024-12-04T01:00:32.3405832-03:00 0HN8K3063SH8R:0000000B [INF] Executed endpoint '"BFASenado.Controllers.BFAController.SaveHash (BFASenado)"' (99874f2b)
+2024-12-04T01:00:32.3533397-03:00 0HN8K3063SH8R:0000000B [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/SaveHash application/json-patch+json 1331 - 204 0 - 2620.2834ms (791a596a)
+2024-12-04T01:01:08.0027471-03:00 0HN8K3063SH8R:0000000D [INF] Request starting HTTP/2 GET https://localhost:7070/api/BFA/SaveMasivo - - (ca22a1cb)
+2024-12-04T01:01:08.1048363-03:00 0HN8K3063SH8R:0000000D [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)"' (500cc934)
+2024-12-04T01:01:08.1105093-03:00 0HN8K3063SH8R:0000000D [INF] Route matched with "{action = \"SaveMasivo\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] SaveMasivo()" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T01:01:08.1330728-03:00 0HN8K3063SH8R:0000000D [INF] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]" (0723d8ff)
+2024-12-04T01:01:08.2032206-03:00 0HN8K3063SH8R:0000000D [ERR] LogDTO { Fecha: 12/04/2024 01:01:08, Endpoint: "/api/BFA/SaveMasivo", MetodoHttp: "GET", DatosRecibidos: "c6886ce4db3e875563bffb1306499ade7374f6756a2f809da72285fb6075ed18", Mensaje: "Error al guardar el hash", Detalles: "String value expected for type 'string'" } (60b9aab8)
+2024-12-04T01:01:08.2055491-03:00 0HN8K3063SH8R:0000000D [ERR] LogDTO { Fecha: 12/04/2024 01:01:08, Endpoint: "/api/BFA/SaveMasivo", MetodoHttp: "GET", DatosRecibidos: null, Mensaje: "Guardado masivo de hashes realizado correctamente. Cantidad de impactos: 0", Detalles: null } (60b9aab8)
+2024-12-04T01:01:08.2057617-03:00 0HN8K3063SH8R:0000000D [INF] Executing "OkObjectResult", writing value of type '"System.String"'. (605b4265)
+2024-12-04T01:01:08.2060224-03:00 0HN8K3063SH8R:0000000D [INF] Executed action "BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)" in 95.3842ms (afa2e885)
+2024-12-04T01:01:08.2060671-03:00 0HN8K3063SH8R:0000000D [INF] Executed endpoint '"BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)"' (99874f2b)
+2024-12-04T01:01:08.2063088-03:00 0HN8K3063SH8R:0000000D [INF] Request finished HTTP/2 GET https://localhost:7070/api/BFA/SaveMasivo - - - 200 - text/plain;+charset=utf-8 203.5647ms (791a596a)
+2024-12-04T01:02:56.2007577-03:00 0HN8K3063SH8R:0000000F [INF] Request starting HTTP/2 GET https://localhost:7070/api/BFA/SaveMasivo - - (ca22a1cb)
+2024-12-04T01:02:56.3063785-03:00 0HN8K3063SH8R:0000000F [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)"' (500cc934)
+2024-12-04T01:02:56.3065379-03:00 0HN8K3063SH8R:0000000F [INF] Route matched with "{action = \"SaveMasivo\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] SaveMasivo()" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T01:03:01.1952545-03:00 0HN8K3063SH8R:0000000F [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]" (0723d8ff)
+2024-12-04T01:07:55.4983632-03:00  [INF] Now listening on: "https://localhost:7070" (d826f4b8)
+2024-12-04T01:07:55.5040432-03:00  [INF] Now listening on: "http://localhost:5232" (d826f4b8)
+2024-12-04T01:07:55.7233034-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-04T01:07:55.7299417-03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-12-04T01:07:55.7322678-03:00  [INF] Content root path: "E:\PROYECTOS\BFA-API\" (b5d60022)
+2024-12-04T01:07:55.7745221-03:00 0HN8K34THOSQB:00000001 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - - (ca22a1cb)
+2024-12-04T01:07:56.0299144-03:00 0HN8K34THOSQB:00000001 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - - - 200 - text/html;charset=utf-8 259.9648ms (791a596a)
+2024-12-04T01:07:56.0372358-03:00 0HN8K34THOSQB:00000003 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2024-12-04T01:07:56.0400278-03:00 0HN8K34THOSQB:00000003 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 2.7836ms (791a596a)
+2024-12-04T01:07:56.0492453-03:00 0HN8K34THOSQB:00000005 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - - (ca22a1cb)
+2024-12-04T01:07:56.1103455-03:00 0HN8K34THOSQB:00000005 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 61.1143ms (791a596a)
+2024-12-04T01:07:56.1382649-03:00 0HN8K34THOSQB:00000007 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - (ca22a1cb)
+2024-12-04T01:07:56.1451780-03:00 0HN8K34THOSQB:00000007 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.0546ms (791a596a)
+2024-12-04T01:08:03.8593376-03:00 0HN8K34THOSQB:00000009 [INF] Request starting HTTP/2 GET https://localhost:7070/api/BFA/SaveMasivo - - (ca22a1cb)
+2024-12-04T01:08:04.0199863-03:00 0HN8K34THOSQB:00000009 [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)"' (500cc934)
+2024-12-04T01:08:04.0402513-03:00 0HN8K34THOSQB:00000009 [INF] Route matched with "{action = \"SaveMasivo\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] SaveMasivo()" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T01:08:08.5697688-03:00 0HN8K34THOSQB:00000009 [INF] Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]" (0723d8ff)
+2024-12-04T01:08:09.4264042-03:00 0HN8K34THOSQB:00000009 [INF] Executed DbCommand ("42"ms) [Parameters=["@p10='?' (DbType = Int64), @p0='?' (Size = 8000) (DbType = AnsiString), @p1='?' (Size = 100), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (DbType = Int64), @p7='?' (Size = 100), @p8='?' (DbType = Boolean), @p9='?' (Size = 100)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [TransaccionBFA] SET [Base64] = @p0, [Detalles] = @p1, [FechaAltaBFA] = @p2, [FechaAltaTabla] = @p3, [HashHexa] = @p4, [HashSHA256] = @p5, [IdTabla] = @p6, [NombreTabla] = @p7, [SnAltaBFA] = @p8, [TipoDocumento] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;" (0723d8ff)
+2024-12-04T01:08:09.4615672-03:00 0HN8K34THOSQB:00000009 [ERR] LogDTO { Fecha: 12/04/2024 01:08:09, Endpoint: "/api/BFA/SaveMasivo", MetodoHttp: "GET", DatosRecibidos: null, Mensaje: "Guardado masivo de hashes realizado correctamente. Cantidad de impactos: 1", Detalles: null } (60b9aab8)
+2024-12-04T01:08:09.4753329-03:00 0HN8K34THOSQB:00000009 [INF] Executing "OkObjectResult", writing value of type '"System.String"'. (605b4265)
+2024-12-04T01:08:09.4813328-03:00 0HN8K34THOSQB:00000009 [INF] Executed action "BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)" in 5436.775ms (afa2e885)
+2024-12-04T01:08:09.4820324-03:00 0HN8K34THOSQB:00000009 [INF] Executed endpoint '"BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)"' (99874f2b)
+2024-12-04T01:08:09.4983392-03:00 0HN8K34THOSQB:00000009 [INF] Request finished HTTP/2 GET https://localhost:7070/api/BFA/SaveMasivo - - - 200 - text/plain;+charset=utf-8 5638.9948ms (791a596a)
+2024-12-04T01:16:26.1647440-03:00  [INF] Now listening on: "https://localhost:7070" (d826f4b8)
+2024-12-04T01:16:26.1695104-03:00  [INF] Now listening on: "http://localhost:5232" (d826f4b8)
+2024-12-04T01:16:26.3315787-03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-04T01:16:26.3343953-03:00  [INF] Hosting environment: "Development" (c3307c92)
+2024-12-04T01:16:26.3363563-03:00  [INF] Content root path: "E:\PROYECTOS\BFA-API\" (b5d60022)
+2024-12-04T01:16:26.7734160-03:00 0HN8K39LRCI0P:00000001 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/index.html - - (ca22a1cb)
+2024-12-04T01:16:27.0275775-03:00 0HN8K39LRCI0P:00000001 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/index.html - - - 200 - text/html;charset=utf-8 256.5489ms (791a596a)
+2024-12-04T01:16:27.0376465-03:00 0HN8K39LRCI0P:00000003 [INF] Request starting HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - (ca22a1cb)
+2024-12-04T01:16:27.0420278-03:00 0HN8K39LRCI0P:00000003 [INF] Request finished HTTP/2 GET https://localhost:7070/_framework/aspnetcore-browser-refresh.js - - - 200 13770 application/javascript;+charset=utf-8 4.3406ms (791a596a)
+2024-12-04T01:16:27.0458031-03:00 0HN8K39LRCI0P:00000005 [INF] Request starting HTTP/2 GET https://localhost:7070/_vs/browserLink - - (ca22a1cb)
+2024-12-04T01:16:27.1052654-03:00 0HN8K39LRCI0P:00000005 [INF] Request finished HTTP/2 GET https://localhost:7070/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.4865ms (791a596a)
+2024-12-04T01:16:27.1370663-03:00 0HN8K39LRCI0P:00000007 [INF] Request starting HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - (ca22a1cb)
+2024-12-04T01:16:27.1496358-03:00 0HN8K39LRCI0P:00000007 [INF] Request finished HTTP/2 GET https://localhost:7070/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 12.5730ms (791a596a)
+2024-12-04T01:16:46.3161017-03:00 0HN8K39LRCI0P:00000009 [INF] Request starting HTTP/2 POST https://localhost:7070/api/BFA/Hashes application/json-patch+json 4 (ca22a1cb)
+2024-12-04T01:16:46.5689045-03:00 0HN8K39LRCI0P:00000009 [INF] Executing endpoint '"BFASenado.Controllers.BFAController.Hashes (BFASenado)"' (500cc934)
+2024-12-04T01:16:46.5973362-03:00 0HN8K39LRCI0P:00000009 [INF] Route matched with "{action = \"Hashes\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[BFASenado.DTO.ResponseDTO.GetHashDTO]]] Hashes(BFASenado.DTO.RequestDTO.GetHashListDTO)" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T01:16:47.3979426-03:00 0HN8K39LRCI0P:00000009 [INF] LogDTO { Fecha: 12/04/2024 01:16:47, Endpoint: "/api/BFA/Hashes", MetodoHttp: "POST", DatosRecibidos: null, Mensaje: "Hashes obtenidos correctamente (sin filtro)", Detalles: null } (60b9aab8)
+2024-12-04T01:16:47.4083979-03:00 0HN8K39LRCI0P:00000009 [INF] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[BFASenado.DTO.ResponseDTO.GetHashDTO, BFASenado, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (605b4265)
+2024-12-04T01:16:47.4270430-03:00 0HN8K39LRCI0P:00000009 [INF] Executed action "BFASenado.Controllers.BFAController.Hashes (BFASenado)" in 825.4831ms (afa2e885)
+2024-12-04T01:16:47.4276872-03:00 0HN8K39LRCI0P:00000009 [INF] Executed endpoint '"BFASenado.Controllers.BFAController.Hashes (BFASenado)"' (99874f2b)
+2024-12-04T01:16:47.4343739-03:00 0HN8K39LRCI0P:00000009 [INF] Request finished HTTP/2 POST https://localhost:7070/api/BFA/Hashes application/json-patch+json 4 - 200 1823 application/json;+charset=utf-8 1118.2574ms (791a596a)
+2024-12-04T01:18:20.9240368-03:00 0HN8K39LRCI0P:0000000B [INF] Request starting HTTP/2 GET https://localhost:7070/api/BFA/SaveMasivo - - (ca22a1cb)
+2024-12-04T01:18:21.0333819-03:00 0HN8K39LRCI0P:0000000B [INF] Executing endpoint '"BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)"' (500cc934)
+2024-12-04T01:18:21.0353578-03:00 0HN8K39LRCI0P:0000000B [INF] Route matched with "{action = \"SaveMasivo\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] SaveMasivo()" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T01:18:22.3127410-03:00 0HN8K39LRCI0P:0000000B [INF] Executed DbCommand ("54"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Id], [t].[Base64], [t].[Detalles], [t].[FechaAltaBFA], [t].[FechaAltaTabla], [t].[HashHexa], [t].[HashSHA256], [t].[IdTabla], [t].[NombreTabla], [t].[SnAltaBFA], [t].[TipoDocumento]
+FROM [TransaccionBFA] AS [t]" (0723d8ff)
+2024-12-04T01:18:22.5070596-03:00 0HN8K39LRCI0P:0000000B [ERR] LogDTO { Fecha: 12/04/2024 01:18:22, Endpoint: "/api/BFA/SaveMasivo", MetodoHttp: "GET", DatosRecibidos: null, Mensaje: "Guardado masivo de hashes realizado correctamente. Cantidad de impactos: 0", Detalles: null } (60b9aab8)
+2024-12-04T01:18:22.5072621-03:00 0HN8K39LRCI0P:0000000B [INF] Executing "OkObjectResult", writing value of type '"System.String"'. (605b4265)
+2024-12-04T01:18:22.5074544-03:00 0HN8K39LRCI0P:0000000B [INF] Executed action "BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)" in 1472.0442ms (afa2e885)
+2024-12-04T01:18:22.5074828-03:00 0HN8K39LRCI0P:0000000B [INF] Executed endpoint '"BFASenado.Controllers.BFAController.SaveMasivo (BFASenado)"' (99874f2b)
+2024-12-04T01:18:22.5205423-03:00 0HN8K39LRCI0P:0000000B [INF] Request finished HTTP/2 GET https://localhost:7070/api/BFA/SaveMasivo - - - 200 - text/plain;+charset=utf-8 1596.5775ms (791a596a)
+2024-12-04T01:18:35.1669004-03:00 0HN8K39LRCI0P:0000000D [INF] Request starting HTTP/2 GET https://localhost:7070/api/BFA/Balance - - (ca22a1cb)
+2024-12-04T01:18:35.2680606-03:00 0HN8K39LRCI0P:0000000D [INF] Executing endpoint '"BFASenado.Controllers.BFAController.Balance (BFASenado)"' (500cc934)
+2024-12-04T01:18:35.2705959-03:00 0HN8K39LRCI0P:0000000D [INF] Route matched with "{action = \"Balance\", controller = \"BFA\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Decimal]] Balance()" on controller "BFASenado.Controllers.BFAController" ("BFASenado"). (122b2fdf)
+2024-12-04T01:18:35.2836580-03:00 0HN8K39LRCI0P:0000000D [INF] LogDTO { Fecha: 12/04/2024 01:18:35, Endpoint: "/api/BFA/Balance", MetodoHttp: "GET", DatosRecibidos: "0x683Dd77586C289040456B9F49E5D5F82C752a606", Mensaje: "Balance/gas de la cuenta obtenido correctamente", Detalles: null } (60b9aab8)
+2024-12-04T01:18:35.2845545-03:00 0HN8K39LRCI0P:0000000D [INF] Executing "OkObjectResult", writing value of type '"System.Decimal"'. (605b4265)
+2024-12-04T01:18:35.2857141-03:00 0HN8K39LRCI0P:0000000D [INF] Executed action "BFASenado.Controllers.BFAController.Balance (BFASenado)" in 15.0703ms (afa2e885)
+2024-12-04T01:18:35.2857715-03:00 0HN8K39LRCI0P:0000000D [INF] Executed endpoint '"BFASenado.Controllers.BFAController.Balance (BFASenado)"' (99874f2b)
+2024-12-04T01:18:35.2859504-03:00 0HN8K39LRCI0P:0000000D [INF] Request finished HTTP/2 GET https://localhost:7070/api/BFA/Balance - - - 200 10 application/json;+charset=utf-8 119.0774ms (791a596a)

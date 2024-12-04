@@ -1,6 +1,4 @@
 ﻿using BFASenado.DTO.ResponseDTO;
-using Nethereum.Contracts;
-using Nethereum.Web3;
 
 namespace BFASenado.Services.BFA
 {

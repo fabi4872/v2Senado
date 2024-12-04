@@ -35,6 +35,7 @@
             public const string NodoDisponibleError = "El nodo público de la BFA no está disponible";
             public const string NodoSincronizadoError = "El nodo público de la BFA no está sincronizado";
             public const string ServicioDisponibleError = "Servicio no disponible o no sincronizado";
+            public const string HashGuardarMasivoError = "Error durante el guardado masivo de hashes";
 
             // Success
             public const string GetBalanceSuccess = "Balance/gas de la cuenta obtenido correctamente";
@@ -44,6 +45,7 @@
             public const string GetHashesConFiltroSuccess = "Hashes obtenidos correctamente (con filtro)";
             public const string GetHashesSinFiltroSuccess = "Hashes obtenidos correctamente (sin filtro)";
             public const string TransaccionGuardarSuccess = "Transacción guardada en la BFA correctamente";
+            public const string HashGuardarMasivoSuccess = "Guardado masivo de hashes realizado correctamente";
         }
     }
 }

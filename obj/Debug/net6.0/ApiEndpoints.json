@@ -151,6 +151,26 @@
   },
   {
     "ContainingType": "BFASenado.Controllers.BFAController",
+    "Method": "SaveMasivo",
+    "RelativePath": "api/BFA/SaveMasivo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BFASenado.Controllers.BFAController",
     "Method": "SHA256ByBase64",
     "RelativePath": "api/BFA/SHA256ByBase64",
     "HttpMethod": "POST",
