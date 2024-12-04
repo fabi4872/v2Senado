@@ -331,7 +331,7 @@ namespace BFASenado.Controllers
                 foreach (var h in hashStrings)
                 {
                     var hashDTO = await _BFAService.GetHashDTO(h);
-                    if (hashDTO != null)
+                    if (hashDTO != null && !hashes.Any(existingHash => existingHash.Hash == hashDTO.Hash))
                     {
                         hashes.Add(hashDTO);
                     }
@@ -445,9 +445,6 @@ namespace BFASenado.Controllers
                             recuperado.SnAltaBFA = true;
                             await _transaccionBFAService.Update(recuperado);
                         }
-
-                        // Guardar masivo
-                        await this.SaveHashMasivo();
 
                         // Retornar
                         return Ok(resultRecuperado);
